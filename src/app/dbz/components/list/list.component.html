@@ -7,21 +7,29 @@
     let thelast = last;
     let iseven = even
     let isodd = odd"
+    class="list-group-item d-flex justify-content-between aling-item-center"
+     [ngClass]="{'list-group-item-success': thelast,
+    'list-group-item-dark' : isfirst
+  }">
 
-  class="list-group-item">
+    <div>
+      <span class="text-primary"> {{i + 1}} </span>
 
-    <span class="text-primary"> {{i + 1}} </span>
+      <span>{{ character.name }}</span> -
 
-    <span>{{ character.name }}</span> -
+      <strong>Power:</strong>
 
-    <strong>Power:</strong>
+      <span> {{ character.power }}</span>
 
-    <span> {{ character.power }}</span>
+      <span>Es par? {{iseven}} </span>
 
-    <span>Es par? {{iseven}} </span>
-    <span>Es impar? {{isodd}}</span>
+      <span>Es impar? {{isodd}}</span>
+
+    </div>
     <!-- <span>Es el pirmero: {{ isfirst }} </span>
     <span>Es el ultimos: {{thelast}} </span> -->
+
+    <button (click)="ondeleteCharacter(i)" class="btn btn-danger">X</button>
   </li>
 
 </ul>

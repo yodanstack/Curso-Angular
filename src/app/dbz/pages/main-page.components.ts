@@ -18,6 +18,16 @@ export class MainpageComponent {
   },{
     name: 'Vegeta',
     power: 7500
+
   }
 ];
+
+onnewcharacter(Character:Character):void{
+  this.character.push(Character);
+
+}
+
+onedeletcharacter(index:number){
+  this.character.splice(index)
+}
 }
