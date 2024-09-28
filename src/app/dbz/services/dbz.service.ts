@@ -33,7 +33,8 @@ onnewcharacter(Character:Character):void{
 // }
 
 DeleteCharaacterbyId( id:string ){
-  this.character = this.character.filter(Character => Character.id !== id )
+  this.character = this.character.filter(Character => Character.id !== id );
+
 }
 
 }

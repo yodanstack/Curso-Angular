@@ -10,5 +10,6 @@ import { Dbzservice } from '../services/dbz.service';
 export class MainpageComponent {
   constructor( public dbzService: Dbzservice ){
 
+
   }
 }
