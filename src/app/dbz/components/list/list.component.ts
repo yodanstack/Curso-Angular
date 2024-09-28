@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, input, Output, output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
+import { every } from 'rxjs';
 
 @Component({
   selector: 'dbz-list',
@@ -17,12 +18,18 @@ export class ListComponent {
 
   // public onDeteled  = this.ondeleteCharacter;
   @Output()
- public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete = new EventEmitter<String>()
+  // public onDelete: EventEmitter<number> = new EventEmitter();
 
 
 
-  ondeleteCharacter(index:number) {
-    this.onDelete.emit( index );
+  ondeleteCharacter( id?: string ) {
+    //TODO: emitir el ID del personaje
+    // console.log(index);
+    if (!id ) return;
+    console.log(id);
+
+    this.onDelete.emit(id);
   }
 
 }

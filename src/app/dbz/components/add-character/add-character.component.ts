@@ -19,7 +19,7 @@ export class AddCharacterComponent {
 
   emitcharacter():void {
 
-    debugger;
+    // debugger;
 
     console.log(this.Character)
 
